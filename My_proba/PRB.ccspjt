@@ -1,0 +1,67 @@
+[PROJECT]
+Target=PRB.hex
+Processor_Text=PIC16C73B
+CCSVerions=5.019
+Compiler=PCM
+CCSVersion=5.019
+Development_Mode=
+ToolSuite=CCS
+[Target Data]
+FileList=PRB.c
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+[Directories]
+Include=C:\Program Files\PICC\devices\;C:\Program Files\PICC\drivers\;D:\Projects PIC\My_proba\
+Library=
+LinkerScript=
+output=
+[D:\Projects PIC\My_proba\PRB]
+Type=4
+[mru-list]
+1=PRB.c
+[Opened Files]
+1=C:\Program Files\PICC\drivers\2465.C
+2=PRB.h
+3=PRB.c
+4=
+[PRB.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+[fileformats]
+forcecoff=1
+debug=4
+error=2
+object=2
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[CompilerVersion]
+Fixed=
+[Documentation]
+1=D:\Projects PIC\My_proba\PRB Notes.txt
+1T=PRB Notes.txt
+1E=
+1W=0
+Count=1
+[Units]
+Count=1
+1=PRB (main)

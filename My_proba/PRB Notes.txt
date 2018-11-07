@@ -1,0 +1,7 @@
+if (flag==0) 
+      {
+         flag = 1;
+      } else {
+         flag = 0;
+      }
+      output_bit( PIN_B3, flag);

@@ -1,0 +1,147 @@
+#include <PRB.h>
+#include <2465.C>
+#include <LCD.C>
+#include <stdlib.h>
+
+unsigned char NewState, OldState, OldVol, upState, downState, OldBtnW, OldBtnR;
+unsigned char Vol = 0x7F;
+char Duty[]=(13);
+
+
+void EncoderScan(void);
+void LcdOut (void);
+
+
+#INT_TIMER2
+void  TIMER2_isr(void) 
+{
+   EncoderScan();
+      
+}
+
+#define LCD_ENABLE_PIN PIN_B0
+#define LCD_RS_PIN PIN_B1
+#define LCD_RW_PIN PIN_B2
+#define LCD_DATA4 PIN_B4
+#define LCD_DATA5 PIN_B5
+#define LCD_DATA6 PIN_B6
+#define LCD_DATA7 PIN_B7
+
+
+void EncoderScan(void)
+{
+    NewState = input_a() & 0x03; 
+    if (NewState != OldState) { 
+        switch (OldState) {
+            case 2:
+                {
+                if (NewState == 3)upState++;
+                if (NewState == 0)downState++;
+                break;
+                }
+            case 0:
+                {
+                if (NewState == 2)upState++;
+                if (NewState == 1)downState++;  
+                break;
+                }
+            case 1:
+                {
+                if (NewState == 0)upState++;
+                if (NewState == 3)downState++; 
+                break;
+                }
+            case 3:
+                {
+                if (NewState == 1)upState++;
+                if (NewState == 2)downState++; 
+                break;
+                }
+        }; 
+        OldState = NewState;  
+        if (upState >= 4) { 
+            Vol+=1;
+            upState = 0;
+        };
+        if (downState >= 4) { 
+            Vol-=1;
+            downState = 0;
+        }; 
+        if (Vol > 255) Vol = 255;
+        if (Vol < 0) Vol = 0;
+    
+    };
+
+}
+
+void LcdOut (void)
+{
+     
+     lcd_putc("\f");
+     lcd_putc("Select num = ");
+     itoa(Vol,10,Duty);
+     lcd_putc(Duty);
+
+}
+
+
+void main()
+{
+   setup_timer_2(T2_DIV_BY_1,100,10);      //40,4 us overflow, 404 us interrupt
+
+   init_ext_eeprom();
+   //lcd_init();
+
+   enable_interrupts(INT_TIMER2);
+   enable_interrupts(GLOBAL);
+   
+   lcd_init();
+   
+
+   while(TRUE)
+   {
+      //TODO: User Code
+      if (Vol != OldVol) {   
+          LcdOut();
+          OldVol = Vol;
+        };  
+      if(~input(PIN_A2))
+          {
+              delay_ms(10);
+              if((~input(PIN_A2))&(~OldBtnW))
+                {  
+                    write_ext_eeprom(0x12, Vol);
+                    lcd_putc("\f");
+                    LcdOut();
+                    lcd_gotoxy(1, 2); 
+                    lcd_putc("Write num = ");
+                    itoa(Vol,10,Duty);
+                    lcd_putc(Duty); 
+                    OldBtnW=1;
+           
+                }; 
+           } else
+               { 
+                    OldBtnW=0;
+               }; 
+      if(~input(PIN_A3))
+          {   
+              delay_ms(10);    
+              if((~input(PIN_A3))&(~OldBtnR))
+                {  
+                    lcd_putc("\f");
+                    LcdOut();
+                    lcd_gotoxy(1, 2);
+                    lcd_putc("Read num = ");
+                    itoa(read_ext_eeprom(0x12),10,Duty);
+                    lcd_putc(Duty);  
+                    OldBtnR=1;
+                };
+          } else
+            {
+               OldBtnR=0; 
+            };        
+      
+   }
+
+}

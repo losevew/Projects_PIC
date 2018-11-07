@@ -1,0 +1,7 @@
+>>> Warning 206 "PRB.c" Line 69(1,1): Variable of this data type is never greater than this constant
+>>> Warning 204 "PRB.c" Line 69(1,1): Condition always FALSE
+>>> Warning 205 "PRB.c" Line 70(1,1): Unsigned variable is never less than zero
+>>> Warning 204 "PRB.c" Line 70(1,1): Condition always FALSE
+      Memory usage:   ROM=34%      RAM=16% - 34%
+      0 Errors,  4 Warnings.
+Build Successful.

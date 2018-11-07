@@ -1,0 +1,51 @@
+#include <PRB.h>
+
+#include <2465.C>
+#include <LCD.C>
+
+#INT_TIMER2
+
+unsigned char flag = 0;
+
+void  TIMER2_isr(void) 
+{
+//!   if (flag==0) 
+//!      {
+//!         flag = 1;
+//!      } else {
+//!         flag = 0;
+//!      }
+//!      output_bit( PIN_B3, flag);
+}
+
+#define LCD_ENABLE_PIN PIN_B0
+#define LCD_RS_PIN PIN_B1
+#define LCD_RW_PIN PIN_B2
+#define LCD_DATA4 PIN_B4
+#define LCD_DATA5 PIN_B5
+#define LCD_DATA6 PIN_B6
+#define LCD_DATA7 PIN_B7
+
+
+
+void main()
+{
+   setup_timer_2(T2_DIV_BY_1,100,10);      //40,4 us overflow, 404 us interrupt
+
+   init_ext_eeprom();
+   lcd_init();
+
+   enable_interrupts(INT_TIMER2);
+   enable_interrupts(GLOBAL);
+
+   lcd_init();
+   lcd_putc("Hello !!");
+   output_bit( PIN_B3, 1);
+   
+
+   while(TRUE)
+   {
+      //TODO: User Code
+   }
+
+}
