@@ -1,0 +1,62 @@
+MPLINK 4.40, Linker
+Linker Map File - Created Sun Jun 16 18:34:32 2013
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x0000cc
+    .config_2007_KLDISP.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000065      
+                            0x002007    0x002007      
+            103 out of 1094 program addresses used, program memory utilization is 9%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    DELAY   0x00005a    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                    EQUAL   0x000046    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                   GET_IT   0x00003b    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                    GLOOP   0x00003e    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                   GOT_IT   0x000039    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                     LOOP   0x00004d    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                       M1   0x000021    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                       M2   0x00005c    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                       M3   0x00005e    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                    OPROS   0x00000f    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                  SCAN_IT   0x000025    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                    SLOOP   0x000029    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                SPI_WRITE   0x00004a    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                    START   0x000001    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                   S_EXIT   0x00003a    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000001    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                    OPROS   0x00000f    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                       M1   0x000021    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                  SCAN_IT   0x000025    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                    SLOOP   0x000029    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                   GOT_IT   0x000039    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                   S_EXIT   0x00003a    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                   GET_IT   0x00003b    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                    GLOOP   0x00003e    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                    EQUAL   0x000046    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                SPI_WRITE   0x00004a    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                     LOOP   0x00004d    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                    DELAY   0x00005a    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                       M2   0x00005c    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+                       M3   0x00005e    program     static D:\Projects PIC\KlDisp\KlDisp.asm
+
+

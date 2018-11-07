@@ -1,0 +1,5 @@
+Message[302] D:\PROJECTS PIC\KLDISP\KLDISP.ASM 40 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\PROJECTS PIC\KLDISP\KLDISP.ASM 42 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\PROJECTS PIC\KLDISP\KLDISP.ASM 43 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[202] D:\PROJECTS PIC\KLDISP\KLDISP.ASM 175 : Argument out of range.  Least significant bits used.
+Warning[202] D:\PROJECTS PIC\KLDISP\KLDISP.ASM 177 : Argument out of range.  Least significant bits used.
