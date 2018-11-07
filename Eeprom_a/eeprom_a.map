@@ -1,0 +1,34 @@
+MPLINK 4.40, Linker
+Linker Map File - Created Mon Mar 12 21:34:05 2012
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_2       code   0x000000    program   0x000032
+                   .org_1       code   0x002100    program   0x00005a
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000018      
+                            0x002100    0x00212c      
+            70 out of 1094 program addresses used, program memory utilization is 6%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000001    program     static D:\Projects PIC\Eeprom_a\eeprom_a.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000001    program     static D:\Projects PIC\Eeprom_a\eeprom_a.asm
+
+
