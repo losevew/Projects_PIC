@@ -1,0 +1,13 @@
+ÀÄKlDisp
+   ÀÄMAIN  0/73  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄscan_it  0/31  Ram=2
+      ÃÄget_it  0/20  Ram=3
+      ³  ÀÄscan_it  0/31  Ram=2
+      ÃÄspi_write  0/18  Ram=2
+      ÃÄspi_write  0/18  Ram=2
+      ÃÄspi_write  0/18  Ram=2
+      ÃÄspi_write  0/18  Ram=2
+      ÃÄspi_write  0/18  Ram=2
+      ÃÄspi_write  0/18  Ram=2
+      ÀÄspi_write  0/18  Ram=2

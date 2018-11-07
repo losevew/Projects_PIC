@@ -1,0 +1,47 @@
+
+ROM used:   146 (14%)
+            146 (14%) including unused fragments
+
+            1 Average locations per line
+            2 Average locations per statement
+
+RAM used:   5 (7%) at main() level
+            11 (16%) worst case
+
+Stack used: 2/8 worst case (2 in main + 0 for interrupts)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  120    85 100  KlDisp.c
+   19     0   0  KlDisp.h
+  133     0   0  C:\Program Files\PICC\devices\16F84A.h
+----- -----
+  272    85 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     31  21   2   420  7.0  scan_it
+0     20  14   3   249  5.5  get_it
+0     18  12   2   279  5.1  spi_write
+0     73  50   1   941  6.3  MAIN
+ Inline        0             @cinit1
+
+Program metrics:
+    Functions               4
+    Statements              85
+    Comments                48
+    Volume (V)              2506
+    Difficulty (D)          23.8
+    Effort to implement (E) 59756
+    Time to implement (T)   55 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   14
+    Maintainability (MI)    48
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-003FF   142  878  
+
+
+

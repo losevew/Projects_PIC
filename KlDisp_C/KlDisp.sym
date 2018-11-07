@@ -1,0 +1,63 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+005.0   SDO
+005     PORT_A
+005.1   SCK
+006     PORT_B
+006.5   COL1
+006.6   COL2
+006.7   COL3
+00C     @SCRATCH
+00D     @SCRATCH
+00D     _RETURN_
+00E     @SCRATCH
+00F     @SCRATCH
+011     MAIN.inpkey
+012     MAIN.oldkey
+013     get_it.count
+013     spi_write.datum
+013     MAIN.@SCRATCH1
+014     spi_write.k
+014     get_it.old_key
+015     get_it.new_key
+016     scan_it.key
+017     scan_it.pattern
+10D-10E @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+000004  scan_it
+000023  get_it
+000037  spi_write
+000049  MAIN
+000049  @cinit1
+00004C  @cinit2
+
+Project Directory:
+    D:\Projects PIC\KlDisp_C\
+
+Project Files:
+    KlDisp.c                                                [23-апр-14 21:02  CRC=2016440A]
+    KlDisp.h                                                [23-апр-14 21:01  CRC=23661B7D]
+    C:\Program Files\PICC\devices\16F84A.h                  [30-ноя-12 18:59  CRC=4F78B2DA]
+
+Source signature=E26DC53B
+
+Units:
+    KlDisp (main)
+
+Compiler Settings:
+    Processor:      PIC16F84A
+    Pointer Size:   8
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      KlDisp.err
+    Ext Symbols: KlDisp.esym
+    Binary:      KlDisp.hex
+    Symbols:     KlDisp.sym
+    List:        KlDisp.lst
+    Debug/COFF:  KlDisp.cof
+    Project:     KlDisp.PJT
+    Call Tree:   KlDisp.tre
+    Statistics:  KlDisp.STA
