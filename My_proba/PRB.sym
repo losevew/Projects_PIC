@@ -1,6 +1,6 @@
 004-005 @READ_PROGRAM_MEMORY8.P1
-006     lcd
 006     lcdlat
+006     lcd
 015     CCP_1_LOW
 015     CCP_1
 016     CCP_1_HIGH
@@ -32,79 +32,80 @@
 038     OldBtnR
 039     Vol
 03A-03C duty
-03D-03E read_ext_eeprom.address
-03D-03E write_ext_eeprom.address
-03D     lcd_init.i
-03D     LcdOut.@SCRATCH1
-03D     MAIN.@SCRATCH1
-03E     lcd_putc.c
-03E-041 lcd_init.LCD_INIT_STRING
-03E-041 itoa.num
-03F     read_ext_eeprom.data
-03F     write_ext_eeprom.data
-03F     lcd_gotoxy.x
-040     lcd_gotoxy.y
-040     @I2C_READ_2.P1
-040.0   ext_eeprom_ready.ack
-040     write_ext_eeprom.@SCRATCH1
-040     read_ext_eeprom.@SCRATCH1
-041     @I2C_WRITE_2.P1
-041     lcd_gotoxy.address
-041     @I2C_READ_2.@SCRATCH1
-042     @delay_ms1.P1
-042     itoa.base
-042     @I2C_READ_2.@SCRATCH2
-042     lcd_init.@SCRATCH1
-042     lcd_gotoxy.@SCRATCH1
-043     itoa.s
-043     lcd_send_byte.address
-044     lcd_send_byte.n
-044-047 itoa.temp
-045     lcd_read_byte.low
-045     lcd_send_byte.@SCRATCH1
-046     lcd_read_byte.high
-046     lcd_send_nibble.n
-047     lcd_read_byte.@SCRATCH1
-048     itoa.i
-049     itoa.sign
-04A     itoa.cnt
-04B     itoa.c
-04C-04F @MUL3232.P1
-04C     itoa.@SCRATCH1
-04D     itoa.@SCRATCH2
-04E     itoa.@SCRATCH3
-04F     itoa.@SCRATCH4
-050-053 @MUL3232.P1
-050     itoa.@SCRATCH5
-051     itoa.@SCRATCH6
-052-055 @DIVS3232.P1
-052     itoa.@SCRATCH7
-053     itoa.@SCRATCH8
-054     itoa.@SCRATCH9
-054     @MUL3232.@SCRATCH1
-055     itoa.@SCRATCH10
-055     @MUL3232.@SCRATCH2
-056-059 @DIVS3232.P1
-056     @MUL3232.@SCRATCH3
-057     @MUL3232.@SCRATCH4
-058     @MUL3232.@SCRATCH5
-05A     @DIVS3232.@SCRATCH1
-05B     @DIVS3232.@SCRATCH2
-05C     @DIVS3232.@SCRATCH3
-05D     @DIVS3232.@SCRATCH4
-05E     @DIVS3232.@SCRATCH5
-05F     @DIVS3232.@SCRATCH6
-060     EncoderScan.@SCRATCH1
+03D     @sprintf_string
+03E-03F read_ext_eeprom.address
+03E     lcd_init.i
+03E-03F write_ext_eeprom.address
+03E     LcdOut.@SCRATCH1
+03E     MAIN.@SCRATCH1
+03F-042 itoa.num
+03F-042 lcd_init.LCD_INIT_STRING
+03F     lcd_putc.c
+040     write_ext_eeprom.data
+040     lcd_gotoxy.x
+040     read_ext_eeprom.data
+041.0   ext_eeprom_ready.ack
+041     lcd_gotoxy.y
+041     @I2C_READ_2.P1
+041     write_ext_eeprom.@SCRATCH1
+041     read_ext_eeprom.@SCRATCH1
+042     lcd_gotoxy.address
+042     @I2C_WRITE_2.P1
+042     @I2C_READ_2.@SCRATCH1
+043     @delay_ms1.P1
+043     itoa.base
+043     @I2C_READ_2.@SCRATCH2
+043     lcd_init.@SCRATCH1
+043     lcd_gotoxy.@SCRATCH1
+044     itoa.s
+044     lcd_send_byte.address
+045     lcd_send_byte.n
+045-048 itoa.temp
+046     lcd_read_byte.low
+046     lcd_send_byte.@SCRATCH1
+047     lcd_read_byte.high
+047     lcd_send_nibble.n
+048     lcd_read_byte.@SCRATCH1
+049     itoa.i
+04A     itoa.sign
+04B     itoa.cnt
+04C     itoa.c
+04D-050 @MUL3232.P1
+04D     itoa.@SCRATCH1
+04E     itoa.@SCRATCH2
+04F     itoa.@SCRATCH3
+050     itoa.@SCRATCH4
+051-054 @MUL3232.P1
+051     itoa.@SCRATCH5
+052     itoa.@SCRATCH6
+053-056 @DIVS3232.P1
+053     itoa.@SCRATCH7
+054     itoa.@SCRATCH8
+055     itoa.@SCRATCH9
+055     @MUL3232.@SCRATCH1
+056     itoa.@SCRATCH10
+056     @MUL3232.@SCRATCH2
+057-05A @DIVS3232.P1
+057     @MUL3232.@SCRATCH3
+058     @MUL3232.@SCRATCH4
+059     @MUL3232.@SCRATCH5
+05B     @DIVS3232.@SCRATCH1
+05C     @DIVS3232.@SCRATCH2
+05D     @DIVS3232.@SCRATCH3
+05E     @DIVS3232.@SCRATCH4
+05F     @DIVS3232.@SCRATCH5
+060     @DIVS3232.@SCRATCH6
+061     EncoderScan.@SCRATCH1
 086     lcdtris
 10D-10E @READ_PROGRAM_MEMORY8.P1
 
 ROM Allocation:
-000044  @const915.call
-00004A  @const916.call
-00005C  @const921.call
-00006D  @const923.call
+000044  @const890.call
+00004A  @const894.call
+00005C  @const899.call
+00006D  @const901.call
 00007D  EncoderScan
-0000BF  @goto11894
+0000BF  @goto4801
 0000C7  TIMER2_isr
 0000CB  init_ext_eeprom
 0000D7  @delay_ms1
@@ -126,7 +127,7 @@ ROM Allocation:
 000456  @I2C_READ_2
 0004B6  @cinit1
 0004B6  MAIN
-0004C1  @cinit2
+0004C2  @cinit2
 0136  StrtoulGO
 0136  StrtolGO
 
@@ -134,17 +135,20 @@ Project Directory:
     D:\Projects PIC\My_proba\
 
 Project Files:
-    PRB.c                                                   [27-янв-16 20:28  CRC=96DADCA4]
-    PRB.h                                                   [26-янв-16 20:13  CRC=64D0046D]
-    C:\Program Files\PICC\devices\16C73B.h                  [12-фев-14 15:09  CRC=B2E597FF]
-    C:\Program Files\PICC\drivers\2465.C                    [06-апр-07 10:55  CRC=5A809A98]
-    C:\Program Files\PICC\drivers\LCD.C                     [19-сен-13 15:38  CRC=D1A6378A]
-    C:\Program Files\PICC\drivers\stdlib.h                  [08-июн-11 14:39  CRC=0B6669CF]
-    C:\Program Files\PICC\drivers\stddef.h                  [16-июл-10 09:27  CRC=897CEC6C]
-    C:\Program Files\PICC\drivers\string.h                  [14-июл-11 10:13  CRC=23EDEC8F]
-    C:\Program Files\PICC\drivers\ctype.h                   [03-янв-08 13:55  CRC=2D1F019F]
+    PRB.c                                                   [27-янв-16 21:28  CRC=96DADCA4]
+    PRB.h                                                   [26-янв-16 21:13  CRC=64D0046D]
+    C:\Program Files\PICC\devices\16C73B.h                  [08-сен-15 15:14  CRC=CEDAD814]
+    C:\Program Files\PICC\drivers\2465.C                    [06-апр-07 11:55  CRC=5A809A98]
+    C:\Program Files\PICC\drivers\LCD.C                     [19-сен-13 16:38  CRC=D1A6378A]
+    C:\Program Files\PICC\drivers\stdlib.h                  [07-дек-14 17:58  CRC=07F0FCBD]
+    C:\Program Files\PICC\drivers\stddef.h                  [05-сен-14 11:47  CRC=897CEC6C]
+    C:\Program Files\PICC\drivers\string.h                  [26-мар-15 12:34  CRC=C4814297]
+    C:\Program Files\PICC\drivers\ctype.h                   [03-янв-08 14:55  CRC=2D1F019F]
 
-Source signature=EDC6913A
+Source signature=A6D9BA45
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=75F7
 
 Units:
     PRB (main)
@@ -156,12 +160,13 @@ Compiler Settings:
     Opt Level:      9
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32
+    Compile Mode:       CCS5
 
 Output Files:
     XREF file:   PRB.xsym
     Errors:      PRB.err
     Ext Symbols: PRB.esym
-    Binary:      PRB.hex
+    INHX8:       PRB.hex
     Symbols:     PRB.sym
     List:        PRB.lst
     Debug/COFF:  PRB.cof

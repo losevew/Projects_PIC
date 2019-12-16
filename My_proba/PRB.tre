@@ -1,5 +1,5 @@
 ÀÄPRB
-   ÃÄMAIN  0/187  Ram=1
+   ÃÄMAIN  0/188  Ram=1
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄinit_ext_eeprom  0/12  Ram=0
    ³  ÃÄlcd_init  0/60  Ram=6
@@ -15,7 +15,7 @@
    ³  ³     ÃÄlcd_send_nibble  0/14  Ram=1
    ³  ³     ÀÄlcd_send_nibble  0/14  Ram=1
    ³  ÃÄLcdOut  0/40  Ram=1
-   ³  ³  ÃÄ@const915  0/6  Ram=0
+   ³  ³  ÃÄ@const890  0/6  Ram=0
    ³  ³  ÃÄlcd_putc  0/44  Ram=1
    ³  ³  ³  ÃÄlcd_gotoxy  0/18  Ram=4
    ³  ³  ³  ³  ÀÄlcd_send_byte  0/64  Ram=3
@@ -29,7 +29,7 @@
    ³  ³  ³  ³  ÀÄ*
    ³  ³  ³  ÀÄlcd_send_byte  0/64  Ram=3
    ³  ³  ³     ÀÄ*
-   ³  ³  ÃÄ@const916  0/18  Ram=0
+   ³  ³  ÃÄ@const894  0/18  Ram=0
    ³  ³  ÃÄlcd_putc  0/44  Ram=1
    ³  ³  ³  ÀÄ*
    ³  ³  ÃÄitoa  0/229  Ram=24
@@ -50,14 +50,14 @@
    ³  ³  ÃÄ@I2C_WRITE_2  0/74  Ram=1
    ³  ³  ÃÄ@I2C_WRITE_2  0/74  Ram=1
    ³  ³  ÀÄ@I2C_WRITE_2  0/74  Ram=1
-   ³  ÃÄ@const915  0/6  Ram=0
+   ³  ÃÄ@const890  0/6  Ram=0
    ³  ÃÄlcd_putc  0/44  Ram=1
    ³  ³  ÀÄ*
    ³  ÃÄLcdOut  0/40  Ram=1
    ³  ³  ÀÄ*
    ³  ÃÄlcd_gotoxy  0/18  Ram=4
    ³  ³  ÀÄ*
-   ³  ÃÄ@const921  0/17  Ram=0
+   ³  ÃÄ@const899  0/17  Ram=0
    ³  ÃÄlcd_putc  0/44  Ram=1
    ³  ³  ÀÄ*
    ³  ÃÄitoa  0/229  Ram=24
@@ -69,14 +69,14 @@
    ³  ÃÄlcd_putc  0/44  Ram=1
    ³  ³  ÀÄ*
    ³  ÃÄ@delay_ms1  0/20  Ram=1
-   ³  ÃÄ@const915  0/6  Ram=0
+   ³  ÃÄ@const890  0/6  Ram=0
    ³  ÃÄlcd_putc  0/44  Ram=1
    ³  ³  ÀÄ*
    ³  ÃÄLcdOut  0/40  Ram=1
    ³  ³  ÀÄ*
    ³  ÃÄlcd_gotoxy  0/18  Ram=4
    ³  ³  ÀÄ*
-   ³  ÃÄ@const923  0/16  Ram=0
+   ³  ÃÄ@const901  0/16  Ram=0
    ³  ÃÄlcd_putc  0/44  Ram=1
    ³  ³  ÀÄ*
    ³  ÃÄread_ext_eeprom  0/171  Ram=4
@@ -97,4 +97,4 @@
    ³     ÀÄ*
    ÀÄTIMER2_isr  0/4  Ram=0
       ÀÄEncoderScan  0/66  Ram=1
-         ÀÄ@goto11894  0/8  Ram=0
+         ÀÄ@goto4801  0/8  Ram=0
